@@ -19,7 +19,39 @@ public class twoNumbers {
 
     class solucion{
         public ListaNodo addTwoNumbers(ListaNodo l1, ListaNodo l2){
-            
+            //inicializar la construcción de la lista enlazada
+            ListaNodo inicio = new ListaNodo(0);
+            ListaNodo actual = inicio; //se instanció y se usa un nodo ficticio de nombre "inicio"
+            int acarreo = 0; //acarreo (simula el acarreo de una suma común)
+
+            //recorrera las dos listas para veirificar que no queden nodos
+            while (l1 != null || l2 != null) {
+                //se obtendrán los valores actuales de los nodos aunque sean nulos:
+                int valor1 = (l1 != null) ? l1.val : 0;
+                int valor2 = (l2 != null) ? l2.val : 0;
+
+                //calcular la suma y acarreo
+                int sum = valor1 + valor2 + acarreo;
+                acarreo = sum / 10;
+                int sobrante = sum % 10; //se obtiene la parte sobrante de la división
+
+                //se crea un nuevo nodo y se movera el puntero
+                actual.next = new ListaNodo(sobrante);
+                actual = actual.next;
+
+                //Se moveran los punteros (l1 y l2) si no son nulos
+                if (l1 != null) {
+                    l1 = l1.next;
+                }
+                if (l2 != null) {
+                    l2 = l2.next;
+                }
+            }
+            //en caso de un acarreo en el fin, será un nuevo nodo
+            if (acarreo > 0) {
+                actual.next = new ListaNodo();                
+            }
+            return inicio.next;
         }
     }
 }
