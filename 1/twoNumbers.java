@@ -19,7 +19,7 @@ public class twoNumbers {
         //Imprimir la lista de resultados
         
         System.out.println("El resultado es: ");
-        imprimirLista(resultado);
+        solucion.imprimirLista(resultado);
     }
 }
 
