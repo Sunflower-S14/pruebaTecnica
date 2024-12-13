@@ -7,14 +7,31 @@ class validParenthesis {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingresa los siguientes parejas de caracteres: () {} []");
-        String s = scanner.nextLine();        
-
+        String s = scanner.nextLine();  
+        
+        if(validacion(s)){
+            System.out.println("La cadena es válida");
+        }else{
+            System.out.println("La cadena no es válida.");
+        }
+        scanner.close();
     }
 
     public static boolean validacion(String s) {
         //se crea una pila que permitirá guardar los caracteres ingresados en la terminal
         char[] pila = new char[s.length()];
         int limite = -1;
+
+        for (char caracter : s.toCharArray()){
+            if(caracter == '(' || caracter == '{' || caracter == '['){
+                pila[++limite] = caracter;
+            }else{
+                if (limite == -1 || !par(pila[limite], caracter)){
+                    return false;
+                }
+                limite--;
+            }
+        }
 
         return limite == -1;
     }
