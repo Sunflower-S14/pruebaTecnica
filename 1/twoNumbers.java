@@ -4,14 +4,13 @@ public class twoNumbers {
 
     public static void main(String[] args) {
         //Los datos de cada lista primero serán establecidas en código
-        ListaNodo l1 = new ListaNodo(2);
-        l1.next = new ListaNodo(4);
-        l1.next.next = new ListaNodo(3);
+        //Se pide los datos de la primera lista
+        System.out.println("Primera Lista Enlazada: ");
+        ListaNodo l1 = solucion.leerListaNodo();
 
-        //Se crea la segunda lista:
-        ListaNodo l2 = new ListaNodo(5);
-        l2.next = new ListaNodo(6);
-        l2.next.next = new ListaNodo(4);
+        //Se piden lo datos de la segunda lista
+        System.out.println("Segunda Lista Enlazada");
+        ListaNodo l2 = solucion.leerListaNodo();
 
         //Sumar las dos listas
         solucion suma = new solucion();
