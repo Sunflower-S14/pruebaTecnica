@@ -76,8 +76,11 @@ public class twoNumbers {
 
         public static void imprimirLista(ListaNodo nodo){
             while (nodo != null) {
-                System.out.println(nodo.val);   
-                nodo = nodo.next;     
+                System.out.print(nodo.val);   
+                if(nodo.next != null){
+                    System.out.print(" - ");
+                }     
+                nodo = nodo.next;
             }
             System.out.println();
         }
