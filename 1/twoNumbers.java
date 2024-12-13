@@ -5,6 +5,14 @@ public class twoNumbers {
         ListaNodo l1 = new ListaNodo(2);
         l1.next = new ListaNodo(4);
         l1.next = new ListaNodo(3);
+
+        //Se crea la segunda lista:
+        ListaNodo l2 = new ListaNodo(5);
+        l2.next = new ListaNodo(6);
+        l2.next = new ListaNodo(4);
+
+        //Sumar las dos listas
+        ListaNodo resultado = addTwoNumbers(l1, l2);
     }
 
     //puede ir en un paquete aparte- esta clase permitirá crear la lista de los nodos
