@@ -7,8 +7,17 @@ class validParenthesis {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingresa los siguientes parejas de caracteres: () {} []");
-        String s = scanner.nextLine();
+        String s = scanner.nextLine();        
 
     }
+
+    public static boolean validacion(String s) {
+        //se crea una pila que permitirá guardar los caracteres ingresados en la terminal
+        char[] pila = new char[s.length()];
+        int limite = -1;
+
+        return limite == -1;
+    }
+    
 
 }
