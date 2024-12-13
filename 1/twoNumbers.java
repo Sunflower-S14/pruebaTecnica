@@ -46,9 +46,21 @@ public class twoNumbers {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Introduce los valores para la lista enlazada, separados en espacios: ");
             System.out.println("Por ejemplo: 5 7 1");
-            String[] valores = scanner.nextLine().split("");
-        
+            String[] valores = scanner.nextLine().split(" ");
+            if(valores.length ==  0){
+                return null;
+            }
             
+
+            //Construcción de la lista enlazada usando nodos de la clase ListaNodo
+            ListaNodo cabeza = new ListaNodo(Integer.parseInt(valores[0]));
+            ListaNodo actual = cabeza;
+
+            for (int i = 1; i < valores.length; i++){
+                actual.next = new ListaNodo(Integer.parseInt(valores[i]));
+                actual = actual.next;
+            }
+            return cabeza;
         }
 
 
