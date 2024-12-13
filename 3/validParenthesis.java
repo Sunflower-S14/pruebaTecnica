@@ -7,12 +7,12 @@ class validParenthesis {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingresa los siguientes parejas de caracteres: () {} []");
-        String s = scanner.nextLine();  
-        
+        String s = scanner.nextLine();        
+
         if(validacion(s)){
-            System.out.println("La cadena es válida");
+            System.out.println("La cadena es valida. La cadena ingresada fue: "+ s);
         }else{
-            System.out.println("La cadena no es válida.");
+            System.out.println("La cadena no es válida. La cadena ingresada fue: "+s);
         }
         scanner.close();
     }
