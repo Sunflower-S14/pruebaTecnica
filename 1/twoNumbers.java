@@ -13,6 +13,10 @@ public class twoNumbers {
 
         //Sumar las dos listas
         ListaNodo resultado = addTwoNumbers(l1, l2);
+
+        //Imprimir la lista de resultados
+        System.out.println("El resultado es: ");
+        imprimirLista(resultado);
     }
 
     //puede ir en un paquete aparte- esta clase permitirá crear la lista de los nodos
