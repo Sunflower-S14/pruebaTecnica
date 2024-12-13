@@ -111,7 +111,7 @@ public class twoNumbers {
             }
             //en caso de un acarreo en el fin, será un nuevo nodo
             if (acarreo > 0) {
-                actual.next = new ListaNodo();                
+                actual.next = new ListaNodo(acarreo);                
             }
             return inicio.next;
         }
