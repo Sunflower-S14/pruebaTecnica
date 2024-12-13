@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class twoNumbers {
 
     public static void main(String[] args) {
@@ -38,6 +40,18 @@ public class twoNumbers {
 
 
     class solucion{
+
+        //permitirá que el usuario ingrese datos a la lista
+        public static ListaNodo leerListaNodo(){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce los valores para la lista enlazada, separados en espacios: ");
+            System.out.println("Por ejemplo: 5 7 1");
+            String[] valores = scanner.nextLine().split("");
+        
+            
+        }
+
+
         public ListaNodo addTwoNumbers(ListaNodo l1, ListaNodo l2){
             //inicializar la construcción de la lista enlazada
             ListaNodo inicio = new ListaNodo(0);
