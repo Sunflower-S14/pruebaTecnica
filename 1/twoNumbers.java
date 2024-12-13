@@ -49,6 +49,11 @@ public class twoNumbers {
             if(valores.length ==  0){
                 return null;
             }
+            //se agregará la validación: The number of nodes in each linked list is in the range [1, 100].
+            if (valores.length > 100){
+                throw new IllegalArgumentException("Error: Lo siento. La lista no puede tener más de 100 nodos.");
+            }
+
             
 
             //Construcción de la lista enlazada usando nodos de la clase ListaNodo
