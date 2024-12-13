@@ -24,9 +24,8 @@ class validParenthesis {
             } else {
                 System.out.println("La cadena no es válida. La cadena ingresada fue: " + s);
             }
-            scanner.close();
         }
-        
+        scanner.close();
     }
 
     public static boolean validacion(String s) {
