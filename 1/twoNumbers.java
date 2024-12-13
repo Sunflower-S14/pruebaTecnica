@@ -15,4 +15,11 @@ public class twoNumbers {
         ListaNodo(int val) { this.val = val; }
         ListaNodo(int val, ListaNodo next) { this.val = val; this.next = next; }            
     }
+
+
+    class solucion{
+        public ListaNodo addTwoNumbers(ListaNodo l1, ListaNodo l2){
+            
+        }
+    }
 }
