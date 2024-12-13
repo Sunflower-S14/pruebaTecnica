@@ -1,7 +1,10 @@
 public class twoNumbers {
 
     public static void main(String[] args) {
-        
+        //Los datos de cada lista primero serán establecidas en código
+        ListaNodo l1 = new ListaNodo(2);
+        l1.next = new ListaNodo(4);
+        l1.next = new ListaNodo(3);
     }
 
     //puede ir en un paquete aparte- esta clase permitirá crear la lista de los nodos
