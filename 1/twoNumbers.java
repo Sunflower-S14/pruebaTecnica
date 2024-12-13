@@ -54,13 +54,23 @@ public class twoNumbers {
                 throw new IllegalArgumentException("Error: Lo siento. La lista no puede tener más de 100 nodos.");
             }
 
-            
+            //se agrega la segunda validación: It is guaranteed that the list represents a number that does not have leading zeros.
+            int primerValor = Integer.parseInt(valores[0]);
+            if(primerValor == 0 && valores.length >1){
+                throw new IllegalArgumentException("Error: el número no puede tener ceros a la izquierda. ");
+
+            }
 
             //Construcción de la lista enlazada usando nodos de la clase ListaNodo
             ListaNodo cabeza = new ListaNodo(Integer.parseInt(valores[0]));
             ListaNodo actual = cabeza;
 
             for (int i = 1; i < valores.length; i++){
+                //Se agregará una tercera validación: 0 <= Node.val <= 9
+                int valor = Integer.parseInt(valores[i]);
+                if (valor < 0 || valor > 9){
+                    throw new IllegalArgumentException("Error: Los valores de los nodos tienen que estar entre 0 y 9");
+                }
                 actual.next = new ListaNodo(Integer.parseInt(valores[i]));
                 actual = actual.next;
             }
