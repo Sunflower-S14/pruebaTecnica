@@ -4,12 +4,12 @@ public class twoNumbers {
         //Los datos de cada lista primero serán establecidas en código
         ListaNodo l1 = new ListaNodo(2);
         l1.next = new ListaNodo(4);
-        l1.next = new ListaNodo(3);
+        l1.next.next = new ListaNodo(3);
 
         //Se crea la segunda lista:
         ListaNodo l2 = new ListaNodo(5);
         l2.next = new ListaNodo(6);
-        l2.next = new ListaNodo(4);
+        l2.next.next = new ListaNodo(4);
 
         //Sumar las dos listas
         solucion suma = new solucion();
