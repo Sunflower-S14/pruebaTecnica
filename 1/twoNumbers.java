@@ -53,5 +53,9 @@ public class twoNumbers {
             }
             return inicio.next;
         }
+
+        public static void imprimirLista(ListaNodo nodo){
+            
+        }
     }
 }
