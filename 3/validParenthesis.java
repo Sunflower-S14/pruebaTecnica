@@ -6,15 +6,27 @@ class validParenthesis {
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingresa los siguientes parejas de caracteres: () {} []");
-        String s = scanner.nextLine();        
+        System.out.println("=== Verificador de signos de  agrupación===");
+        System.out.println("Ingresa los siguientes caracteres: () {} []");
+        System.out.println("Escribe 'salir' para terminar el programa.");
 
-        if(validacion(s)){
-            System.out.println("La cadena es valida. La cadena ingresada fue: "+ s);
-        }else{
-            System.out.println("La cadena no es válida. La cadena ingresada fue: "+s);
+        while (true) { 
+            System.out.println("Ingrese una cadena: ");
+            String s = scanner.nextLine();        
+
+            if(s.equals("salir")){
+                System.out.println("Usted a terminado su sesión.");
+                break;
+            }
+
+            if (validacion(s)) {
+                System.out.println("La cadena es valida. La cadena ingresada fue: " + s);
+            } else {
+                System.out.println("La cadena no es válida. La cadena ingresada fue: " + s);
+            }
+            scanner.close();
         }
-        scanner.close();
+        
     }
 
     public static boolean validacion(String s) {
