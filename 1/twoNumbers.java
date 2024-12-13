@@ -12,9 +12,12 @@ public class twoNumbers {
         l2.next = new ListaNodo(4);
 
         //Sumar las dos listas
+        solucion addTwoNumbers = new solucion();
+
         ListaNodo resultado = addTwoNumbers(l1, l2);
 
         //Imprimir la lista de resultados
+        
         System.out.println("El resultado es: ");
         imprimirLista(resultado);
     }
