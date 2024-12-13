@@ -18,6 +18,12 @@ class validParenthesis {
 
         return limite == -1;
     }
+
+    //función booleana para verificar si los caracteres de inicio y fin son correctos
+    public static boolean par(char inicio, char fin){
+        return (inicio == '(' && fin == ')'            
+        );
+    }
     
 
 }
