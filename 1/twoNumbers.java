@@ -12,16 +12,18 @@ public class twoNumbers {
         l2.next = new ListaNodo(4);
 
         //Sumar las dos listas
-        solucion addTwoNumbers = new solucion();
+        solucion suma = new solucion();
 
-        ListaNodo resultado = addTwoNumbers(l1, l2);
+        ListaNodo resultado = suma.addTwoNumbers(l1, l2);
 
         //Imprimir la lista de resultados
         
         System.out.println("El resultado es: ");
         imprimirLista(resultado);
     }
+}
 
+//se sacan las clases para que no esten dentro de la clase principal
     //puede ir en un paquete aparte- esta clase permitirá crear la lista de los nodos
     class ListaNodo {
         //Representa un nodo de la lista enlazada 
@@ -78,4 +80,3 @@ public class twoNumbers {
             }
         }
     }
-}
