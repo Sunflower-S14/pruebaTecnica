@@ -102,4 +102,16 @@ class Solution {
         }
         return contador; //Tiene que devolver la cantidad de valores únicos
     }
+
+    //método para validar que los elementos esten entre -100 <=nums[i] <= 100
+    public boolean validateRange(int[]nums){
+        for(int num:nums){
+            if(num <-100 || num > 100){
+                return false; //si algún elemento no cumple con el rango
+            }
+        }
+        return true;
+    }
+
+    
 }
