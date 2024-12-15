@@ -25,7 +25,7 @@ public class sortedArray {
         //Validación: 1 <= nums.length <= 3 * 10^4
         if(n <1 || n > 30000){
             System.out.println("El tamaño del arreglo debe estar entre 1 y 30000.");
-            return; //terminar el programa
+            //return; //terminar el programa
         }
 
         //se declara un array nums en donde se le pasa la cantidad que el usuario le establezca
@@ -54,7 +54,7 @@ public class sortedArray {
             System.out.println("\nEl arreglo debe estar ordenado en orden no decreciente.");
             return; // Terminar el programa si la validación falla
         }
-        
+
         //Eliminación de duplicados
         int k = solucion.removeDuplicates(nums);
 
@@ -81,7 +81,7 @@ class Solution {
 
     public int[] insertNumbers(int[] nums, Scanner scanner){
 
-        System.out.println("Ingresa los elementos del arreglo en orden ascendente.");
+        System.out.println("Ingresa los elementos del arreglo en orden ascendente. Uno por uno.");
         for(int i = 0; i < nums.length; i++){
             nums[i] = scanner.nextInt();
         }
