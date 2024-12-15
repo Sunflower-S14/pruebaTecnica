@@ -32,7 +32,7 @@ public class sortedArray {
         int[] numsLleno = solucion.insertNumbers(nums, scanner);
         //Probamos si devuelve el tamaño que se le asignó
         //System.out.println(nums.length);
-        System.out.println("Elementos que se ingresarón: ");
+        System.out.print("Elementos que se ingresarón: ");
         for (int num : numsLleno){
             System.out.print(num + " ");
         }
@@ -42,11 +42,15 @@ public class sortedArray {
 
         //Se tiene que imprimir la cantidad de valores únicos:
         System.out.print("\nK = "+ k);
-        System.out.print("\nArreglo sin datos duplicados: ");
         
+        System.out.print("\nArreglo sin datos duplicados: ");
         //iteración del arreglo usando el valor de K
         for(int i = 0; i <k; i++){
-            System.out.print(nums[i]+ " ");
+            if (i < k){ //Sí el indice del arreglo es menor que K (elemento único)
+                System.out.print(nums[i] + " "); //Elementos únicos
+            }else{ //si el indice es mayor o igual a K:
+                System.out.print(" _ "); //Los elementos eliminados se muestran con un "_"
+            }
         }
 
     }
@@ -77,7 +81,7 @@ class Solution {
                 nums[puntero] = nums[i]; //se actualiza el valor           
             }
         }
-        return puntero + 1;
+        return puntero + 1; //Total de elementos únicos
 
     }
 }
