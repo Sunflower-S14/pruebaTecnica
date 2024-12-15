@@ -59,10 +59,13 @@ class Solution {
 
         //Iteración en el arreglo
         for(int i = 1; i < nums.length; i++){
-            if () {
-                
+            if (nums[i]!= nums[puntero]) //si el puntero encuentra un valor único en el arreglo
+            { 
+                puntero++; //se mueve el puntero en la siguiente posición del arreglo
+                nums[puntero] = nums[i]; //se actualiza el valor           
             }
         }
+        return puntero;
 
     }
 }
