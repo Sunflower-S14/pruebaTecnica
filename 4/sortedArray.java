@@ -43,8 +43,10 @@ public class sortedArray {
         //Se tiene que imprimir la cantidad de valores únicos:
         System.out.print("\nK = "+ k);
         System.out.print("\nArreglo sin datos duplicados: ");
-
-
+        
+        for(int i = 0; i <k; i++){
+            System.out.println(nums[i]+ " ");
+        }
 
     }
 
