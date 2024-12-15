@@ -37,6 +37,15 @@ public class sortedArray {
             System.out.print(num + " ");
         }
 
+        //Eliminación de duplicados
+        int k = solucion.removeDuplicates(nums);
+
+        //Se tiene que imprimir la cantidad de valores únicos:
+        System.out.print("\nK = "+ k);
+        System.out.print("\nArreglo sin datos duplicados: ");
+
+
+
     }
 
 
