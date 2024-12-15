@@ -44,8 +44,9 @@ public class sortedArray {
         System.out.print("\nK = "+ k);
         System.out.print("\nArreglo sin datos duplicados: ");
         
+        //iteración del arreglo usando el valor de K
         for(int i = 0; i <k; i++){
-            System.out.println(nums[i]+ " ");
+            System.out.print(nums[i]+ " ");
         }
 
     }
@@ -76,7 +77,7 @@ class Solution {
                 nums[puntero] = nums[i]; //se actualiza el valor           
             }
         }
-        return puntero;
+        return puntero + 1;
 
     }
 }
