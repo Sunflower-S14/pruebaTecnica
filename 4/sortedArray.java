@@ -55,5 +55,14 @@ class Solution {
     }
     public int removeDuplicates(int[] nums) {
         
+        int puntero = 0; //servirá para identificar los elementos únicos (recorrido)
+
+        //Iteración en el arreglo
+        for(int i = 1; i < nums.length; i++){
+            if () {
+                
+            }
+        }
+
     }
 }
