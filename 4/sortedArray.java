@@ -20,21 +20,32 @@ public class sortedArray {
         int n;
         n = scanner.nextInt();
 
-        scanner.close();
+        //scanner.close();
         
         //se declara un array nums en donde se le pasa la cantidad que el usuario le establezca
         int [] nums = new int[n];
 
         //Probamos si devuelve el tamaño que se le asignó
         System.out.println(nums.length);
+
+        [] nums = solucion.insertarDatos();
+
     }
 
 
 }
 
-/*se crea una clase que tendrá la lógica de solución
+//se crea una clase que tendrá la lógica de solución
 class Solution {
+
+    public static insertNumbers(){
+
+        for(int i = 0; i < n; i++){
+            nums[i] = scanner.nextInt();
+        }
+
+    }
     public int removeDuplicates(int[] nums) {
         
     }
-}*/
+}
