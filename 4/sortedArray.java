@@ -29,9 +29,13 @@ public class sortedArray {
 
         Solution solucion = new Solution();
 
-        solucion.insertNumbers(nums, scanner);
+        int[] numsLleno = solucion.insertNumbers(nums, scanner);
         //Probamos si devuelve el tamaño que se le asignó
         //System.out.println(nums.length);
+        System.out.println("Elementos que se ingresarón: ");
+        for (int num : numsLleno){
+            System.out.print(num + " ");
+        }
 
     }
 
@@ -41,13 +45,13 @@ public class sortedArray {
 //se crea una clase que tendrá la lógica de solución
 class Solution {
 
-    public void insertNumbers(int[] nums, Scanner scanner]){
+    public int[] insertNumbers(int[] nums, Scanner scanner){
 
         System.out.println("Ingresa los elementos del arreglo en orden ascendente.");
         for(int i = 0; i < nums.length; i++){
             nums[i] = scanner.nextInt();
         }
-
+        return nums; //devolverá el arreglo lleno
     }
     public int removeDuplicates(int[] nums) {
         
