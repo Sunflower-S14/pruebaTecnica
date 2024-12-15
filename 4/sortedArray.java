@@ -77,11 +77,18 @@ class Solution {
         for(int i = 1; i < nums.length; i++){
             if (nums[i]!= nums[puntero]) //si el puntero encuentra un valor único en el arreglo
             { 
-                puntero++; //se mueve el puntero en la siguiente posición del arreglo
-                nums[puntero] = nums[i]; //se actualiza el valor           
+                puntero = i; //se actualiza el puntero al nuevo valor único
+            }else{
+                nums[i] = Integer.MIN_VALUE; // Marcar duplicados como un valor especial
             }
         }
-        return puntero + 1; //Total de elementos únicos
-
+        //Contar los elementos no únicos (no marcados como duplicados)
+        int contador = 0;
+        for(int num : nums){
+            if(num != Integer.MIN_VALUE){
+                contador++;
+            }
+        }
+        return contador; //Tiene que devolver la cantidad de valores únicos
     }
 }
