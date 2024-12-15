@@ -113,5 +113,13 @@ class Solution {
         return true;
     }
 
-    
+    //método para validar que el arreglo esté ordenado en orden ascendente
+    public boolean validateSorted(int[]nums){
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i]< nums[i -1]){
+                return false; //si el orden es no decreciente será falso
+            }
+        }
+        return true;
+    }
 }
