@@ -45,11 +45,11 @@ public class sortedArray {
         
         System.out.print("\nArreglo sin datos duplicados: ");
         //iteración del arreglo usando el valor de K
-        for(int i = 0; i <k; i++){
-            if (i < k){ //Sí el indice del arreglo es menor que K (elemento único)
-                System.out.print(nums[i] + " "); //Elementos únicos
-            }else{ //si el indice es mayor o igual a K:
+        for(int num : nums){
+            if (num == Integer.MIN_VALUE){ 
                 System.out.print(" _ "); //Los elementos eliminados se muestran con un "_"
+            }else{
+                System.out.print(num + " "); //Imprimira los primeros valores únicos que encuentre
             }
         }
 
