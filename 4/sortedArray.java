@@ -44,10 +44,17 @@ public class sortedArray {
         }
 
         //Validación: -100 <= nums[i] <= 100
-        
+        if (!solucion.validateRange(nums)) {
+            System.out.println("\nTodos los elementos deben estar en el rango de -100 a 100.");
+            return; // Terminar el programa si la validación falla
+        }
 
         //Validación: nums is sorted in non-decreasing order.
-
+        if (!solucion.validateSorted(nums)) {
+            System.out.println("\nEl arreglo debe estar ordenado en orden no decreciente.");
+            return; // Terminar el programa si la validación falla
+        }
+        
         //Eliminación de duplicados
         int k = solucion.removeDuplicates(nums);
 
