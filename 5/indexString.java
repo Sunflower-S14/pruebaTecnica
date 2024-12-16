@@ -15,7 +15,30 @@ public class indexString {
 
 class Solution {
     public int strStr(String haystack, String needle) {
-        
+
+        int [] lps = computeLPSArray(needle); //se tendrá que generar el array LPS del patrón 
+        int i = 0; //índice para haystack (recorrido)
+        int j = 0; //índice para needle
+
+        //KMP
+        while (i <haystack.length()) {
+            if (haystack.charAt(i) == needle.charAt(j)) { // Si el carácter actual del texto coincide con el carácter actual del patrón
+                i++; //avanzará al siguiente carácterr del texto
+                j++; //avanzará al siguiente carácter del patrón
+                
+                //si se ha recorrido todo el patrón
+                if(j == needle.length()){
+                    return i - j; //regresará el índice donde comienzza la coincidencia del texto
+                }
+            }else{ //si no coinciden
+                if (j != 0) { //si estamos en una posición dentro del patrón j mayor a 0
+                    j = lps[j -1];   //usamos LPS para retroceder en el patrón, para no volver a comparar
+                }else{ //si estamos al inicio del patrón j == 0
+                    i++; //avanzamos al siguiente carácter en el texto
+                }
+            }            
+        }
+        return -1; //Retornará -1 si el whle no encuentra el patrón en el texto   
     }
     
     //Se realiza un preprocesamiento (LPS) Longitud del patrón
