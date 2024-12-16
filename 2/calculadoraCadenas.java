@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 public class calculadoraCadenas {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa la cadena: ");
+        String cadena = scanner.nextLine();
         //Creamos el objeto que llamará a lengthOfLongestSubstring
+        scanner.close();
         Solution solucion = new Solution();
-        System.out.println(solucion.lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(solucion.lengthOfLongestSubstring(cadena));
     }
  
 }
