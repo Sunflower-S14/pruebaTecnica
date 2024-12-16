@@ -22,9 +22,28 @@ public class indexString {
         //String haystack = "leetcode";
         //String needle = "leeto";
         
+        // Validaciones para las longitudes de las cadenas-1 <= haystack.length, needle.length <= 104
+        //Para haystack
+        if (haystack.length() < 1 || haystack.length() > 104) {
+            System.out.println("Error: La longitud del texto debe estar entre 1 y 104 caracteres.");
+            return;
+        }
+        //Para needle
+        if (needle.length() < 1 || needle.length() > 104) {
+            System.out.println("Error: La longitud del patrón debe estar entre 1 y 104 caracteres.");
+            return;
+        }
+
+        // Validación para caracteres en minúsculas-haystack and needle consist of only lowercase English characters.
+        if (!haystack.matches("[a-z]+") || !needle.matches("[a-z]+")) {
+            System.out.println("Error: Las cadenas deben contener únicamente caracteres en minúsculas.");
+            return;
+        }
+
+        
         //Creamos el objeto para usar el método strStr
         Solution solucion = new Solution();
-        System.out.println("Output: " + solucion.strStr(haystack, needle)); // Salida: 0
+        System.out.println("Salida: " + solucion.strStr(haystack, needle)); 
     }
 }
 
