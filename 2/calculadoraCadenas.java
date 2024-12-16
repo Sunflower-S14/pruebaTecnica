@@ -8,8 +8,11 @@ public class calculadoraCadenas {
         String cadena = scanner.nextLine();
         //Creamos el objeto que llamará a lengthOfLongestSubstring
         scanner.close();
+
+        System.out.println("Entrada: "+cadena);
         Solution solucion = new Solution();
-        System.out.println(solucion.lengthOfLongestSubstring(cadena));
+
+        System.out.print("Salida: "+solucion.lengthOfLongestSubstring(cadena));
     }
  
 }
