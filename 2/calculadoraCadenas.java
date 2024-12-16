@@ -6,13 +6,18 @@ public class calculadoraCadenas {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa la cadena: ");
         String cadena = scanner.nextLine();
-        //Creamos el objeto que llamará a lengthOfLongestSubstring
+        // Cerramos el scanner después de leer la entrada
         scanner.close();
 
-        System.out.println("Entrada: "+cadena);
-        Solution solucion = new Solution();
+        // Mostrar la entrada
+        System.out.println("Entrada: " + cadena);
 
-        System.out.print("Salida: "+solucion.lengthOfLongestSubstring(cadena));
+        // Crear el objeto Solution y calcular el resultado
+        Solution solucion = new Solution();
+        int resultado = solucion.lengthOfLongestSubstring(cadena);
+
+        // Mostrar la salida
+        System.out.println("Salida: " + resultado);
     }
  
 }
@@ -25,6 +30,8 @@ class Solution {
         int maxTam = 0; //almacenará la longitud máxima de la subcadena
         int izq = 0; //puntero izquierdo de la ventana deslizante
         int der; //puntero derecho de la ventana deslizante
+        String subcadena = ""; // Para almacenar la subcadena más larga sin repetir caracteres
+        String mejorSubcadena = ""; // La mejor subcadena encontrada
 
         //se recorrerá cada caracter de la cadena usando el puntero derecho
         for(der = 0; der < s.length(); der++){
@@ -35,11 +42,25 @@ class Solution {
             izq = Math.max(izq, rastreoIndices[actualCaracter]);
 
             //Se calcula la longitud de la subcadena actual y se actualiza maxTam
-            maxTam = Math.max(maxTam, der - izq + 1);
+            //maxTam = Math.max(maxTam, der - izq + 1);
 
+            // Calcular la longitud de la subcadena actual
+            int tamSubcadena = der - izq + 1;
+
+            // Si la subcadena actual es más larga, actualizar la longitud máxima
+            if (tamSubcadena > maxTam) {
+                maxTam = tamSubcadena;
+                mejorSubcadena = s.substring(izq, der + 1); // Guardar la mejor subcadena
+            }
+
+            
             //se actualiza la última posición del carácter actual en el arreglo
             rastreoIndices[actualCaracter] = der + 1;
         }
+
+        // Mostrar la subcadena que es la respuesta
+        System.out.println("El resultado es \"" + mejorSubcadena + "\", con una longitud de " + maxTam + ".");
+
         //Devuelve la longitud máxima encontrada
         return maxTam;
     }
