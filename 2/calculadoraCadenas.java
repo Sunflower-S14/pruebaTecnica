@@ -30,7 +30,7 @@ class Solution {
         int maxTam = 0; //almacenará la longitud máxima de la subcadena
         int izq = 0; //puntero izquierdo de la ventana deslizante
         int der; //puntero derecho de la ventana deslizante
-        String subcadena = ""; // Para almacenar la subcadena más larga sin repetir caracteres
+        //String subcadena = ""; // Para almacenar la subcadena más larga sin repetir caracteres
         String mejorSubcadena = ""; // La mejor subcadena encontrada
 
         //se recorrerá cada caracter de la cadena usando el puntero derecho
